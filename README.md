@@ -4,18 +4,6 @@ This is my fork with some notes and updates from Erick Wendel repository used as
 
 ---
 
-### Requirements
-
-- Node.js v10+
-- MongoDB running on local instance
-
-### Environment Variables
-
-- PORT: 3000
-- MONGO_URL: localhost:27017
-
----
-
 ### Running with Docker
 
 Commands:
@@ -48,6 +36,15 @@ $ docker-compose up
 
 ### Running the base app
 
+Requirements:
+- Node.js v10+
+- MongoDB running on local instance
+
+Environment Variables:
+- PORT: 3000
+- MONGO_URL: localhost:27017
+
+steps:
 - Install dependencies - `npm i`
 - Build typescript - `npm run build`
 - Run project - `npm start`
