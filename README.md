@@ -32,6 +32,36 @@ This command will run accord whit the `docker-compose.yml` file
 $ docker-compose up
 ```
 
+### Pushing images to Docker Hub
+
+First of all, you have to login with docker cli:
+
+```
+$ docker login
+> Username: <YOUR_USERNAME>
+> Password: <YOUR_PASSWORD>
+```
+
+If you already have the image build you need to tag it:
+
+```
+$ docker tag <IMG_BUILD_NAME> <YOUR_USERNAME>/<REPOSITORY_IMG_NAME>:<IMAGE_VERSION(optional)>
+```
+
+If you haven't the image build, you need to create it with the tagged name:
+
+```
+$ docker build -t <YOUR_USERNAME>/<REPOSITORY_IMG_NAME>:<IMAGE_VERSION(optional)> <PATH_TO_THE_APP_DIRECTORY>
+```
+
+Finally, push to docker hub:
+
+```
+$ docker push <TAGGED_IMAGE_NAME>
+```
+
+After this you will be able to use your image as you use a NodeJS or MongoDB image for example.
+
 ---
 
 ## Running the base app
