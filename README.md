@@ -34,6 +34,16 @@ Commands explanation:
 - docker run -p <VIRTUAL_MACHINE_PORT>:<CONTAINER_PORT> --link <LINKED_IMAGE_NAME>:<NEW_SLUG_IMAGE_NAME_ON_CONTAINER> -e <ENV_VARS> <IMAGE_NAME>
 - docker run -d --name <NEW_SLUG_IMAGE_NAME> <IMAGE_NAME>
 
+<br />
+
+### Running with docker compose
+
+This command will run accord whit the `docker-compose.yml` file
+
+```bash
+$ docker-compose up
+```
+
 ## <br />
 
 ### Running the base app
