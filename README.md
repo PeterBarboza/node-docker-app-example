@@ -4,7 +4,7 @@ This is my fork with some notes and updates from Erick Wendel repository used as
 
 ---
 
-### Running with Docker
+## Running with Docker
 
 Commands:
 
@@ -32,19 +32,22 @@ This command will run accord whit the `docker-compose.yml` file
 $ docker-compose up
 ```
 
-## <br />
+---
 
-### Running the base app
+## Running the base app
 
 Requirements:
+
 - Node.js v10+
 - MongoDB running on local instance
 
 Environment Variables:
+
 - PORT: 3000
 - MONGO_URL: localhost:27017
 
 steps:
+
 - Install dependencies - `npm i`
 - Build typescript - `npm run build`
 - Run project - `npm start`
