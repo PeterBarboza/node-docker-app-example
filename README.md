@@ -11,16 +11,16 @@ Commands:
 ```bash
 $ docker build -t api-herois .
 
-$ docker run -p 3000:3000 --link mongodb:mongodb -e MONGO_URL=mongodb api-herois
-
 $ docker run -d --name mongodb mongo:3.5
+
+$ docker run -p 3000:3000 --link mongodb:mongodb -e MONGO_URL=mongodb api-herois
 ```
 
 Commands explanation:
 
 - docker build -t <NEW_IMAGE_NAME> <PATH_TO_THE_APP_DIRECTORY>
-- docker run -p <VIRTUAL_MACHINE_PORT>:<CONTAINER_PORT> --link <LINKED_IMAGE_NAME>:<NEW_SLUG_IMAGE_NAME_ON_CONTAINER> -e <ENV_VARS> <IMAGE_NAME>
-- docker run -d --name <NEW_SLUG_IMAGE_NAME> <IMAGE_NAME>
+- docker run -d --name <NEW_IMAGE_NICKNAME> <IMAGE_NAME>
+- docker run -p <EXPOSED_PORT>:<INTERNAL_CONTAINER_PORT> --link <LINKED_IMAGE_NAME>:<NEW_IMAGE_NICKNAME_IN_CONTAINER> -e <ENV_VARS> <IMAGE_NAME>
 
 <br />
 
