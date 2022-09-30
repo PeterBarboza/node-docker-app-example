@@ -31,6 +31,16 @@ This command will run accord whit the `docker-compose.yml` file
 ```bash
 $ docker-compose up
 ```
+If you want to set environment variables in `docker-compose.yml` you can use this sintax to set the values `${<YOUR_VAR>}`:
+```yml
+db:
+  image: "postgres:${POSTGRES_VERSION}"
+  
+# You can use with quotes or not
+
+db:
+  image: postgres:${POSTGRES_VERSION}
+```
 
 ### Pushing images to Docker Hub
 
